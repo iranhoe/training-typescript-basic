@@ -1,7 +1,14 @@
-const toppings = ['bacon', 'chilli'];
+const pizza = {
+    name: 'Pepperoni'
+};
 
-const newToppings = ['pepperoni'];
+const toppings = ['pepperoni'];
 
-const allToppings = [...newToppings, ...toppings];
+const order = Object.assign({} ,
+    pizza,
+    { toppings }
+);
 
-console.log(allToppings);
+const spreadOrder = {...pizza, toppings };
+
+console.log(order, spreadOrder);
