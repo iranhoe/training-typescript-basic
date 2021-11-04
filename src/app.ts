@@ -1,24 +1,10 @@
-const pizza = {
-    name: 'Pepperoni',
-    toppings: ['pepperoni'],
-};
+const pizzaCost: number = 10;
+const pizzaToppings: number = 2;
 
-function order({name: pizzaName, toppings: pizzaToppings}) {
-    return { pizzaName, pizzaToppings };
+function calculatePrince(cost: number, toppings: number): number {
+    return cost + 1.5 * toppings;
 }
 
-const { pizzaName } = order(pizza);
+const cost: number = calculatePrince(pizzaCost, pizzaToppings);
 
-order(pizza);
-
-const toppings  = ['pepperoni', 'bacon', 'chili'];
-
-const [ first, second, third ] = toppings;
-
-console.log(first, second, third);
-
-function logToppings([first, second, third]: any) {
-    console.log(first, second, third);
-}
-
-logToppings(toppings);
+console.log(`Pizza costs: ${cost}`);
