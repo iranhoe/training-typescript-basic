@@ -1,5 +1,5 @@
 abstract class Sizes {
-    constructor(public sizes: string[]) {}
+    constructor(protected sizes: string[]) {}
 
     set availableSizes(sizes: string[]) {
         this.sizes = sizes;
