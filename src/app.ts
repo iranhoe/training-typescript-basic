@@ -1,8 +1,14 @@
-const elem = document.querySelector('.click');
+const person = {
+    name: 'Iran',
+    age: 27
+};
 
-function handleClick(this: HTMLAnchorElement, event: Event) {
-    event.preventDefault();
-    console.log(this.className);
-}
+type Person = typeof person;
 
-elem?.addEventListener('click', handleClick, false);
+const anotherPerson: Person = {
+    name: 'John',
+    age: 30
+};
+
+// JavaScript
+// typeof person // 'object'
