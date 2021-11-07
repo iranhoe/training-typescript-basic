@@ -1,13 +1,15 @@
 enum Sizes {
-    Small,
-    Medium,
-    Large
+    Small = 'small',
+    Medium = 'medium',
+    Large = 'large'
 }
 
-enum Sizes {
-    ExtraLarge = 3
+let selected: Sizes = Sizes.Small;
+
+function updateSize(size: Sizes): void {
+    selected = size;
 }
 
-const selectedSize = 2;
+console.log(Sizes.Large);
 
-console.log(Sizes.Large, Sizes[selectedSize]);
+console.log(selected);
