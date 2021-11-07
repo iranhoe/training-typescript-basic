@@ -1,19 +1,12 @@
-const myObj = {
+class MyClass {
     myMethod() {
-        console.log('Object:::', this);
-    },
-};
-
-//myObj.myMethod();
-
-// Function
-function myFunction(...text: string[]) {
-    console.log('Function:::', this, text);
+        const Foo = 123;
+        console.log('1', this);
+        setTimeout(() => {
+            console.log('2', this);
+        }, 0);
+    }
 }
 
-const bindFunction = myFunction.bind(myObj);
-bindFunction('ABC', 'DEF');
-bindFunction('123', '456');
-bindFunction('ABC', 'DEF');
-myFunction.call(myObj, 'ABC', 'DEF');
-myFunction.apply(myObj, ['ABC', 'DEF']);
+const myInstance = new MyClass();
+myInstance.myMethod();
