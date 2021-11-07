@@ -17,6 +17,10 @@ class Pizza extends Sizes {
         super(sizes);
     }
 
+    public updateSizes(sizes: string[]) {
+        this.sizes = sizes;
+    }
+
     public addTopping(topping: string) {
         this.toppings.push(topping);
     }
@@ -24,4 +28,5 @@ class Pizza extends Sizes {
 
 const pizza = new Pizza('Pepperoni', ['small', 'medium']);
 console.log(pizza.availableSizes)
-pizza.addTopping('pepperoni');
+pizza.updateSizes(['large']);
+console.log(pizza.availableSizes);
