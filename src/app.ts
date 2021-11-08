@@ -1,14 +1,14 @@
-interface Person {
-    name: string;
-    age: number;
-    address: {}
+let dictionary: Record<string, TrackStates> = {};
+
+interface TrackStates {
+    current: string;
+    next: string;
 }
 
-type MyPick<T, K extends keyof T> = {
-    [P in K]: T[P]
-}
-
-const person: Pick<Person, 'name' | 'age'> = {
-    name: 'Iran',
-    age: 27
+const item: Record<keyof TrackStates, string> = {
+    current: 'js02js9'       ,
+    next: '8nlksjsk'
 };
+
+//Number are coerced to String
+dictionary['0'] = item;
